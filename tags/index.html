@@ -542,6 +542,25 @@ $(function () {
                 }, 3e3))
         })
     </script>
+    
+    <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+    
+        <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+    WIDGET = {FID: '4FPbpF9z8b'}
+  </script>
+  <!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+  
+  <script type="text/javascript">
+    //只在桌面版网页启用特效
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
+        document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+    }
+    </script>
+
+    
+
 </body>
 
 </html>
