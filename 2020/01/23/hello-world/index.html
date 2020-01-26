@@ -688,27 +688,30 @@
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
+        
 
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+    <link rel="stylesheet" href="/css/my-gitalk.css">
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '3bc577612030741bf911',
-        clientSecret: '2ca2fed554f866f8b8739ec2f4352e11b7c5bc77',
-        repo: 'A-dull-rabbit.github.io',
-        owner: 'A-dull-rabbit',
-        admin: '["A-dull-rabbit"]',
-        id: '2020/01/23/hello-world/',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
+    <div class="card gitalk-card" data-aos="fade-up">
+        <div id="gitalk-container" class="card-content"></div>
+    </div>
+    
+    <script src="/libs/gitalk/gitalk.min.js"></script>
+    
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '',
+          clientSecret: '',
+          repo: 'A-dull-rabbit.github.io',
+          owner: '',
+          admin: [''],
+          id: location.pathname,
+          distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+  
     
 
     
@@ -1218,22 +1221,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </main>
 
 
-{% elseif theme.gitalk.enable %}
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<div id="gitalk-container"></div>
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        id: window.location.pathname,
-        repo: 'A-dull-rabbit.github.io',
-        owner: 'A-dull-rabbit',
-        admin: 'A-dull-rabbit'
-    })
-    gitalk.render('gitalk-container')
-</script>
-{% endif %}
+
 
     <footer class="page-footer bg-color">
     <div class="container row center-align" style="margin-bottom: 0px !important;">
@@ -1393,8 +1381,6 @@ $(function () {
     <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
     
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
     <script type="text/javascript">
         var OriginTitile = document.title,
