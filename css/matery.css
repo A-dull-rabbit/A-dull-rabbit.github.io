@@ -144,6 +144,7 @@ pre {
 }
 */
 /*修改一下才能正确显示行号,而不是一条竖线 洪卫 shw2018 2019.08.14  */
+/*
 pre {
     padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
     margin: 1rem 0 !important;
@@ -156,10 +157,122 @@ pre {
 code {
     padding: 1px 5px;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    /*font-size: 0.91rem;*/
+    /*font-size: 0.91rem;*//*
     color: #e96900;
     background-color: #f8f8f8;
     border-radius: 2px;
+}
+
+pre code {
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+}
+
+pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+    white-space: pre-wrap !important;
+}
+*/
+.line-numbers-rows {
+    border-right-width: 0px !important;
+}
+
+.line-numbers {
+    padding: 1.5rem 1.5rem 1.5rem 3.2rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.35rem;
+    tab-size: 4;
+}
+
+
+pre {
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.35rem;
+    tab-size: 4;
+}
+
+pre::before {
+    content: "";
+    height: 16px;
+    margin-bottom: 0;
+    display: block;
+}
+
+pre::after {
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+
+code {
+    padding: 1px 5px;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    font-size: 0.91rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+}
+
+.code_copy {
+    position: absolute;
+    top: 0.7rem;
+    right: 25px;
+    z-index: 1;
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+.code_lang {
+    position: absolute;
+    top: 1.2rem;
+    right: 46px;
+    line-height: 0;
+    font-weight: bold;
+    font-family: normal;
+    z-index: 1;
+    filter: invert(50%);
+    cursor: pointer;
+} 
+
+.code-expand {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    filter: invert(50%);
+    padding: 7px 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+    transform: rotate(0deg);
+}
+
+.code-closed .code-expand {
+    transform: rotate(-180deg) !important;
+    transition: all .3s;
+}
+
+.code-closed pre::before {
+    height: 0px;
 }
 
 pre code {
@@ -956,11 +1069,30 @@ article .article-tags .chip {
     font-size: 1rem;
     font-weight: 400;
     height: 25px;
-    line-height: 25px;
+    line-height: 24px;
     color: #fff;
     border-radius: 15px;
     margin-right: 5px;
     margin-bottom: 2px;
+}
+
+#artDetail .tag_share .article-tag .chip {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 25px;
+    line-height: 23px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    color: #42b983;
+    background: #fff;
+    border: 1px solid;
+    transition: all 0.6s ease-in-out;
+}
+
+#artDetail .tag_share .article-tag .chip:hover {
+    color: #fff;
+    background: #42b983;
 }
 
 #artDetail .post-cate {
@@ -1060,6 +1192,15 @@ article .article-tags .chip {
 /*下面连着三段是reprint-statement样式*/
 #artDetail .reprint {
     margin: 15px 0 5px 0;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #eee;
+    line-height: 2;
+    transition: box-shadow 0.3s ease-in-out
+}
+
+#artDetail .reprint:hover {
+    box-shadow: 0 0 10px 0 rgba(232, 237, 250, .6), 0 4px 8px 0 rgba(232, 237, 250, .5)
 }
 
 #artDetail .reprint .reprint-tip {
@@ -1165,12 +1306,13 @@ thead {
 
 #article-share .social-share {
     text-align: center;
-    margin: 30px 0;
+    margin: 3px 0;
 }
 
 @media only screen and (min-width: 600px) {
     #article-share .social-share a {
-        margin-right: 15px !important;
+        /* margin-right: 15px !important; */
+        margin-left: 15px !important;
     }
 }
 
@@ -1229,6 +1371,8 @@ thead {
     margin-left: 5px;
     margin-right: -2px;
     font-size: 0.5rem;
+    position: relative;
+    top: 1px;
 }
 
 .chip-default .tag-length {
@@ -1949,6 +2093,7 @@ footer .copy-right {
 }
 
 /* 二级菜单样式定义 洪卫 shw2018 add 2019.09.17 */
+
 .nav-menu {}
 
 .nav-menu li .sub-nav {
@@ -2020,7 +2165,7 @@ footer .copy-right {
 }
 
 .m-nav-item {
-    position: relative;
+    /* position: relative; */
     left: 45px
 }
 
