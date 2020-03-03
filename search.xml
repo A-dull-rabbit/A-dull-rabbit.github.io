@@ -4,23 +4,23 @@
   
     
     <entry>
-      <title>呆萌兔の博客上线啦~</title>
-      <link href="/2020/02/18/01-bo-ke-shang-xian-la/"/>
-      <url>/2020/02/18/01-bo-ke-shang-xian-la/</url>
+      <title>软件体系结构（第一章）</title>
+      <link href="/2020/03/03/03-ruan-jian-gong-cheng-ti-xi-jie-gou-di-yi-zhang/"/>
+      <url>/2020/03/03/03-ruan-jian-gong-cheng-ti-xi-jie-gou-di-yi-zhang/</url>
       
-        <content type="html"><![CDATA[<p>  <br>欢迎访问呆萌兔的 个人博客，这个博客主要记录我学习中遇到的困难，也会记录一些生活上的事情(*❦ω❦)。</p><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/01img/01.png" width="50%" height="50%"><h4 id="就先这样了！"><a href="#就先这样了！" class="headerlink" title="就先这样了！"></a>就先这样了！</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="软件工程体系"><a href="#软件工程体系" class="headerlink" title="软件工程体系"></a>软件工程体系</h1><h2 id="1-1、软件"><a href="#1-1、软件" class="headerlink" title="1.1、软件"></a>1.1、软件</h2><h3 id="1、软件的本质"><a href="#1、软件的本质" class="headerlink" title="1、软件的本质"></a>1、软件的本质</h3><ul><li><p>概念</p><ul><li><p>软件也是一系列按照特定顺序组织的计算机数据和指令的集合。</p><p>软件不是有形的物理产品，而是人类思维的产物。<br>软件不是被制造出来，而是思考出来的。</p></li><li><blockquote><p><strong>软件的限制（遇到的问题） ——–&gt;   软件的复杂性</strong></p></blockquote></li></ul></li><li><p>（1）软件的特性和分类</p><ul><li><p>特性</p><p>软件是设计开发的，而不是传统意义上生产制造的。<br>软件不会磨损和老化。总结：软件不会磨损，但是软件退化的确存在！不断的变更是软件退化的根本原因。<br>随着基于构件的构造模式发展，大多数软件需要根据实际的顾客需求定制。软件的构件应该被设计实现为可在不同程序中复用的组件。</p></li><li><p>分类</p><p>系统软件<br>应用软件<br>嵌入式软件<br>科学和工程计算软件<br>产品线软件<br>人工智能软件</p></li></ul></li><li><p>（2）软件的演变和人类的认识过程</p><ul><li><p>从软件设计方法学角度看，程序设计语言的发展有3个层面：</p><blockquote><p>以标准C语言簇为典型代表的面向过程的软件设计方法，代表编码层面的方法学。<br>以JAVA语言簇为典型代表的面向对象的软件设计方法，代表软件设计层面的方法学。<br>以XML语言为典型代表的面向构件的软件设计方法，代表了软件体系结构的方法学。</p></blockquote></li><li><p>小插曲</p><p>java语言基础（控制台应用/窗口化应用）<br>Html5 CSS3 JS<br>数据库（MySQL）<br>JavaWeb(网页版应用，互联网应用)   web.xml<br>框架（ssh，ssm）：<br>  struts2/spring/hibiscus<br>  Spring/SpringMVC/Mybatis<br>  SpringBoot<br>  Bootstrap/vue<br>  Bean</p></li></ul></li></ul><h3 id="2、软件神话"><a href="#2、软件神话" class="headerlink" title="2、软件神话"></a>2、软件神话</h3><ul><li><p>《人月神话》提出两条著名的法则：</p><blockquote><p>向一个已经延后的项目中投入更多的人力资源，只会让它更延后。</p></blockquote><blockquote><p>没有银弹，没有一种策略、技术、技巧可以极大地提高程序员的生产力。</p></blockquote></li></ul><h2 id="1-2、软件工程"><a href="#1-2、软件工程" class="headerlink" title="1.2、软件工程"></a>1.2、软件工程</h2><h3 id="1、基础知识"><a href="#1、基础知识" class="headerlink" title="1、基础知识"></a>1、基础知识</h3><ul><li><p>（1）美国电气与电子工程师协会（IEEE）给出的定义：</p><blockquote><p>软件工程是：<br>  ① 将系统化的、规范的、可量化的方法应用于软件的开发、运行和维护，即将工程化方法应用于软件。<br>  ② 在 ① 中所述方法的研究。</p></blockquote></li><li><p>（2）软件工程是一种层次化的技术，包括软件工程在内的任何工程方法必须构建在质量的基础之上。</p></li><li><p>（3）全面质量管理、六西格玛和类似的理念促进了不断的过程改进文化，正是这种文化，最终引导人们开发出更有效的软件工程方法。</p></li></ul><h3 id="2、软件过程和软件工程实践"><a href="#2、软件过程和软件工程实践" class="headerlink" title="2、软件过程和软件工程实践"></a>2、软件过程和软件工程实践</h3><ul><li><p>软件过程（Software Process）是工作产品构建时所执行的一系列活动、动作、任务的集合。</p><blockquote><p><strong>活动</strong>：实现宽泛的目标，与应用领域、项目大小、结果复杂性、实施软件工程的重要程度没有直接关系。</p></blockquote><blockquote><p><strong>动作</strong>：包含了主要工作产品（如体系结构设计模型）生产过程中的一系列任务。</p></blockquote><blockquote><p><strong>任务</strong>：关注小而明确的目标，能够产生实际产品。</p></blockquote></li><li><p>一个通用的软件工程过程包含以下5个活动：</p><p><strong>沟通</strong>：在技术工作开始之前，和客户的沟通、协作极其重要。目的是理解利益相关者的项目目标，并收集需求，以定义软件特性、功能。</p><p><strong>策划</strong>：软件项目好比是一个复杂的旅程，策划活动，就是创建一个使任何复杂的旅程都变得简单的地图，以指导团队的项目旅程，该地图称为软件项目计划。</p><p><strong>建模</strong>：无论是庭园设计家、桥梁建造者、航空工程师、木匠还是建筑师，每天的工作都离不开模型。他们会画一张草图，来辅助理解整个项目大的构想，包括体系结构、不同的构件如何结合，以及其它特征。</p><p><strong>构建</strong>：包括手写的、自动生成的编码和测试，以发现编码中的错误。</p><p><strong>部署</strong>：软件以全部、部分增量的形式交付给用户，用户对其进行评测，并给出反馈意见。</p></li><li><p>7条原则</p><p><strong>存在价值</strong>：软件系统因能给用户提供价值，而具有存在价值。所有的决定，都应基于该思想。</p><p><strong>保持简洁</strong>：软件设计并不是随意的过程，软件设计中需要考虑很多因素。所有的设计，都应该尽可能简洁，但不是过于简化。</p><p><strong>保持愿景</strong>：清晰的愿景，是软件项目成功的基础。没有愿景，项目将会有多种设计思想而永远不能结束。</p><p><strong>关注使用者</strong>：有产业实力的软件系统，不是在真空中开发、使用的。通常，软件系统必定是由开发者以外的人员使用、维护和编制文档，等等，这就必须要让别人理解你的系统。尽可能让使用者的工作简单化，会大大提升系统的价值。</p><p><strong>面向未来</strong>：生命期持久的系统，具有更高的价值。在现在的计算环境中，需求规格说明随时会变。</p><p><strong>计划复用</strong>：复用既省时又省力。软件系统开发过程中，高水平的复用，是一个很难实现的目标。面向对象技术会给代码和设计复用带来好处，但是这种投入回报不会自动实现。</p><p><strong>认真思考</strong>：这最后一条规则，可能最容易忽略。行动之前，清晰定位、完整思考，通常能产生更好的结果。仔细思考，可以提高做好事情的可能性，而且也能明确如何把事情做好。</p></li></ul><h3 id="3、网络带来的影响"><a href="#3、网络带来的影响" class="headerlink" title="3、网络带来的影响"></a>3、网络带来的影响</h3><h2 id="1-3、软件设计"><a href="#1-3、软件设计" class="headerlink" title="1.3、软件设计"></a>1.3、软件设计</h2><h3 id="1、软件工程中的设计"><a href="#1、软件工程中的设计" class="headerlink" title="1、软件工程中的设计"></a>1、软件工程中的设计</h3><ul><li><p>简介</p><ul><li><p>（1）概念</p><ul><li><p>朗曼字典里“设计”的概念</p><p>描述某个事物如何被制造出来的图样或模式。<br>形成上述图样或模式的艺术。<br>对人造产品中组成部分的一种安排，将对产品在实践中的可用性具有影响。<br>人的头脑中的一种规则，等等。</p></li><li><p>目标</p><p>由上述定义可见，设计是一种“图样、模式或规划”，<strong>其目标，就是要描述一个产品如何被制造出来</strong></p></li><li><p>简单描述</p><p>因此，软件设计可以被看作是“对软件将如何开发出来的一种描述”。如果把设计当作一个动词，那么软件设计就是“得到这种描述的活动或过程”。</p></li></ul></li><li><p>（2）<strong>软件设计，在软件工程过程中处于核心技术。</strong></p></li><li><p>（3）<strong>对软件需求进行分析和建模开始后，软件设计是建模活动的最后一个软件工程活动，接着便要进入构造阶段，并生成代码和测试。</strong></p></li></ul></li><li><p>设计分类</p><p><strong>分析模型</strong></p><p><strong>数据/类设计</strong>：将分析模型转化为设计类的实现以及软件实现所要的数据结构。</p><p><strong>体系结构设计</strong>：定义了软件的主要结构元素之间的联系，用于达到系统需求的体系结构风格和设计模式，以及影响体系结构实现方式的约束。</p><p><strong>接口设计</strong>：描述了软件和协作系统之间、软件和使用人员之间是如何通信的。</p><p><strong>构件级设计</strong>：将软件体系结构的结构元素变为软件构件的过程性描述。</p></li><li><p>质量评估（标准）</p><p>对于生成代码的人、进行测试的人、维护软件的人，设计必须是可读的、可理解的指南。</p><p>设计必须提供软件的全貌，并从实现的角度说明数据域、功能域、行为域。</p><ul><li>质量指导原则</li><li>质量属性 —-&gt; FURPS：功能性、易用性、可靠性、性能、可维护性</li></ul></li><li><p>设计原则</p><p><strong>抽象（过程抽象/数据抽象）</strong><br><strong>体系结构</strong><br><strong>模式</strong><br><strong>模块化</strong><br><strong>信息隐蔽</strong><br><strong>功能独立（内聚/耦合）</strong><br><strong>求精</strong><br><strong>重构</strong><br><strong>设计类（用户接口类/业务域类/过程类/持久类/系统类）</strong>s</p></li></ul><h2 id="1-4、软件体系结构"><a href="#1-4、软件体系结构" class="headerlink" title="1.4、软件体系结构"></a>1.4、软件体系结构</h2><h2 id="1-5、小结"><a href="#1-5、小结" class="headerlink" title="1.5、小结"></a>1.5、小结</h2><p><em>XMind: ZEN - Trial Version</em></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
           
-          <category> 笔记 </category>
+          <category> 软件体系结构课堂笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> 软件体系结构课堂笔记 </tag>
             
         </tags>
       
@@ -54,17 +54,23 @@
     
     
     <entry>
-      <title>关于vscode C++环境的搭建</title>
-      <link href="/2020/02/17/03-vscode/"/>
-      <url>/2020/02/17/03-vscode/</url>
+      <title>呆萌兔の博客上线啦~</title>
+      <link href="/2020/01/24/01-bo-ke-shang-xian-la/"/>
+      <url>/2020/01/24/01-bo-ke-shang-xian-la/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>emmm,今天弄了好久 vscode 的编译环境。之前c/c++的编译器一般都是用的codeblocks，也是很好用的一个IDE,但是用了 vscode 之后才发现 vscode是一个全能的编译器(个人认为吧)。 好了，不说废话了，下面开始记录我搭建的步骤(搜了好多的资料)。</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>  <br>欢迎访问呆萌兔的个人博客，博客刚刚上线，内容比较少，后期会慢慢添加。这个博客主要记录我学习中遇到的困难，也会记录一些生活上的事情(*❦ω❦)。</p><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/01img/01.png" width="50%" height="50%"><h4 id="就先这样了！"><a href="#就先这样了！" class="headerlink" title="就先这样了！"></a>就先这样了！</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> vscode C++ </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
