@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码,总结">
-    <meta name="description" content="优化自己的代码！">
+    <meta name="keywords" content="python学习">
+    <meta name="description" content="python导包">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>蓝桥杯练习总结一 | 呆萌兔の博客</title>
+    <title>Python 高级语法（一） 包 | 呆萌兔の博客</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">蓝桥杯练习总结一</h1>
+                    <h1 class="description center-align post-title">Python 高级语法（一） 包</h1>
                 </div>
             </div>
         </div>
@@ -339,12 +339,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Practice-summary/">
-                                <span class="chip bg-color">Practice summary</span>
-                            </a>
-                        
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/python%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">python学习</span>
                             </a>
                         
                     </div>
@@ -355,12 +351,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Practice-summary/" class="post-category">
-                                Practice summary
-                            </a>
-                        
-                            <a href="/categories/Practice-summary/C/" class="post-category">
-                                C++
+                            <a href="/categories/python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                python学习
                             </a>
                         
                     </div>
@@ -372,7 +364,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-14
+                    2020-04-16
                 </div>
                 
 
@@ -389,30 +381,180 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Here-we-go"><a href="#Here-we-go" class="headerlink" title="Here we go!"></a>Here we go!</h3><h1 id="一、求最大公约数"><a href="#一、求最大公约数" class="headerlink" title="一、求最大公约数"></a>一、求最大公约数</h1><p>  用欧几里得算法 + 递归:</p>
-<pre><code>// 求 a 与 b 的大公约数
-int gcd(int a, int b){ 
-    return b==0? a; gcd(b, a%b);
-}</code></pre><p>  <strong>欧几里得算法</strong>：以除数和余数反复做除法运算，当余数为 0 时，取当前算式除数为最大公约数。</p>
-<h1 id="二、判断闰年"><a href="#二、判断闰年" class="headerlink" title="二、判断闰年"></a>二、判断闰年</h1><pre><code>bool isLeap(int x){
-    return x%400==0||(x%4==0&amp;&amp;x%100!=0);
-}</code></pre><p>  <strong>闰年的判断</strong>: 能被400整除的年份 和 能被4整除且不能被100整除的年份。(原因：<a href="https://baike.baidu.com/item/%E9%97%B0%E5%B9%B4/27098" target="_blank" rel="noopener">!百度一下你就知道</a>)</p>
-<h1 id="三、简单判素数"><a href="#三、简单判素数" class="headerlink" title="三、简单判素数"></a>三、简单判素数</h1><pre><code>bool isPrime(int t){
-    for(int i=0; i&lt;t/2; ++i){   // 可以判t的开方
-        if(t%i==0) return false;
-    }
-    return true;
-}</code></pre><p>  <strong>素数</strong>: 能被自身开放后以下数整除的不是素数</p>
-<h1 id="四、快速幂"><a href="#四、快速幂" class="headerlink" title="四、快速幂"></a>四、快速幂</h1><pre><code>long pow_2(int b){
-    long x = 2;
-    long res = 1;
-    while( b&gt;0 ){
-        if(b&amp;1) res *= x;
-        b &gt;&gt; 1;
-        x = x*x;
-    }
-    return res;
-}</code></pre><script>
+                <h1 id="Python-高级语法（一）-包"><a href="#Python-高级语法（一）-包" class="headerlink" title="Python 高级语法（一） 包"></a>Python 高级语法（一） 包</h1><hr>
+<h2 id="1、模块"><a href="#1、模块" class="headerlink" title="1、模块"></a>1、模块</h2><ul>
+<li><p>一个模块就是一个python代码的文件，后缀名是.py就可以，模块就是python文件</p>
+</li>
+<li><p>为什么要用模块？</p>
+<ul>
+<li>程序太大，编写维护不方便，需要拆分</li>
+<li>模块可以增加代码的重复利用方式</li>
+<li>当做命名空间使用，避免命名冲突</li>
+</ul>
+</li>
+<li><p>如何定义模块？</p>
+<ul>
+<li>模块是python文件，所以任何代码可以直接书写</li>
+<li>根据模块的规范，最好在模块中编写以下内容<ul>
+<li>函数（单一功能）</li>
+<li>类（相似功能的组合，或者类似业务模块）</li>
+<li>测试代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如何使用模块？</p>
+<ul>
+<li><p>模块直接导入</p>
+</li>
+<li><p>语法</p>
+<pre><code>  import module_name  
+  module_name.function_name  
+  module_name.class_name</code></pre></li>
+<li><p>import 模块 as 别名</p>
+<ul>
+<li>导入的同时给模块起个别名</li>
+<li>其余用法跟第一种相同</li>
+</ul>
+</li>
+<li><p>form module_name import function_name, class_name</p>
+<ul>
+<li>按上述方法有选择行导入</li>
+<li>使用的时候直接使用导入的内容，不需要前缀</li>
+</ul>
+</li>
+<li><p>form module_name import *</p>
+<ul>
+<li>导入模块所有内容 </li>
+<li>类似于 import module_name 有区别：<ul>
+<li>优点：不需要写前缀</li>
+<li>缺点：可能会有命名污染</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>if __name__ == '__main__'</code>的使用</p>
+<ul>
+<li>可以有效避免模块代码被导入的时候被动执行的问题</li>
+<li>建议所有程序的入口都一此代码为入口</li>
+</ul>
+</li>
+</ul>
+<h2 id="2、模块的搜索路径和存储"><a href="#2、模块的搜索路径和存储" class="headerlink" title="2、模块的搜索路径和存储"></a>2、模块的搜索路径和存储</h2><ul>
+<li><p>什么是模块的搜索路径  </p>
+<ul>
+<li>加载摸块的时候，系统会在哪些地方寻找此模快  </li>
+</ul>
+</li>
+<li><p>系统默认的模块搜索路径  </p>
+<pre><code>  import sys  
+  sys.path # 属性可以获取路径列表</code></pre></li>
+<li><p>添加搜索路径  </p>
+<pre><code>  sys.path.append(dir)</code></pre></li>
+<li><p>模块的加载顺序</p>
+<ol>
+<li>先搜索内存中已经加载好的模块</li>
+<li>搜索python的内置模块（eg：print())</li>
+<li>搜索sys.path路径</li>
+</ol>
+</li>
+</ul>
+<h2 id="3、包"><a href="#3、包" class="headerlink" title="3、包"></a>3、包</h2><ul>
+<li>包是一种组织管理代码的方式，包里存放的是模块，用于将模块包含在一起的文件夹就是包</li>
+<li>自定义包结构  </li>
+</ul>
+<pre><code>/---包
+/---/--- __init__.py
+/---/--- 模块1
+/---/--- 模块2
+/---/--- 子包（子文件夹）
+/---/---/--- __init__.py
+/---/---/--- 子包模块1
+/---/---/--- 子包模块2</code></pre><ul>
+<li><p>包的导入操作</p>
+<ul>
+<li><p>import package_name</p>
+<ul>
+<li><p>直接导入一个包 可以使用 <code>__init__.py</code>中的内容</p>
+</li>
+<li><p>使用方式是：  </p>
+<pre><code>  package_name.func_name
+  package_name.class_name.func_name()</code></pre></li>
+</ul>
+</li>
+<li><p>import package_name as 别名</p>
+<ul>
+<li>具体用法、作用方式与上述简单导入一致</li>
+<li>注意的是此种方法默认对<code>__init__.py</code>内容的导入</li>
+</ul>
+</li>
+<li><p>import package.module</p>
+<ul>
+<li><p>导入包中某个具体的模块</p>
+</li>
+<li><p>使用方法</p>
+<pre><code>  package.module.func_name  
+  package.module.class.fun()
+  package.module.class.var</code></pre></li>
+</ul>
+</li>
+<li><p>import package.module as 别名</p>
+<ul>
+<li>具体模块应用别名</li>
+</ul>
+</li>
+<li><p>form … import …  </p>
+<ul>
+<li><p>from package import module1, module2, module3,…</p>
+<ul>
+<li><p>此种方法不执行<code>__init__.py</code>的内容</p>
+<pre><code>  form package import module
+  module.func_name()</code></pre></li>
+</ul>
+</li>
+<li><p>form package import *</p>
+<ul>
+<li><p>导入当前包<code>__init__.py</code>文件中所有的函数和类</p>
+</li>
+<li><p>使用方法</p>
+<pre><code>  func_name()
+  class_name.func_name()
+  class_name.var</code></pre></li>
+</ul>
+</li>
+<li><p>form package.module import *</p>
+<ul>
+<li>导入包中指定模块的所有内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在开发环境中我经常会引用其他模块，可以在低昂前包中直接导入其他模块的内容</p>
+<ul>
+<li>import 完整的包或者模块的路径</li>
+</ul>
+</li>
+<li><p><code>__all__</code> 的用法</p>
+<ul>
+<li>在使用 from package import * 的时候 * 可以导入的内容</li>
+<li><code>__init__.py</code> 中如果文件为空， 或者没有 <code>__all__</code> 那么只可以把<code>__init__.py</code>中的内容导入</li>
+<li><code>__init__.py</code> 中如果设置了<code>__all__</code> 的值，那么则按照<code>__all__</code>指定的子包或模块进行加载，如此则不会载入<code>__init__.py</code>中其他的内容</li>
+<li><code>__all__ = ['module1','module2','package',....]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="4、命名空间"><a href="#4、命名空间" class="headerlink" title="4、命名空间"></a>4、命名空间</h2><ul>
+<li><p>用于区分不同位置不同功能但相同名称的函数或者变量的一个特定的前缀</p>
+</li>
+<li><p>作用是防止命名冲突</p>
+<pre><code>  setName()
+  Student.setName()</code></pre></li>
+</ul>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -455,7 +597,7 @@ int gcd(int a, int b){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rabbit2020.com/2020/03/14/03-lan-qiao-bei-lian-xi-zong-jie-yi/">http://rabbit2020.com/2020/03/14/03-lan-qiao-bei-lian-xi-zong-jie-yi/</a>
+                    <a href="http://rabbit2020.com/2020/04/16/03-python-gao-ji-yu-fa-bao/">http://rabbit2020.com/2020/04/16/03-python-gao-ji-yu-fa-bao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -493,12 +635,8 @@ int gcd(int a, int b){
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Practice-summary/">
-                                    <span class="chip bg-color">Practice summary</span>
-                                </a>
-                            
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/python%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">python学习</span>
                                 </a>
                             
                         </div>
@@ -689,9 +827,9 @@ int gcd(int a, int b){
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://rabbit2020.com/2020/03/14/03-lan-qiao-bei-lian-xi-zong-jie-yi/';
-        this.page.identifier = '/2020/03/14/03-lan-qiao-bei-lian-xi-zong-jie-yi/';
-        this.page.title = '蓝桥杯练习总结一';
+        this.page.url = 'http://rabbit2020.com/2020/04/16/03-python-gao-ji-yu-fa-bao/';
+        this.page.identifier = '/2020/04/16/03-python-gao-ji-yu-fa-bao/';
+        this.page.title = 'Python 高级语法（一） 包';
     };
     let disqus_shortname = '';
 
@@ -982,35 +1120,31 @@ int gcd(int a, int b){
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/03/14/03-lan-qiao-bei-lian-xi-zong-jie-yi/">
+                <a href="/2020/04/16/03-python-gao-ji-yu-fa-bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="蓝桥杯练习总结一">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Python 高级语法（一） 包">
                         
-                        <span class="card-title">蓝桥杯练习总结一</span>
+                        <span class="card-title">Python 高级语法（一） 包</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            优化自己的代码！
+                            python导包
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Practice-summary/" class="post-category">
-                                    Practice summary
-                                </a>
-                            
-                            <a href="/categories/Practice-summary/C/" class="post-category">
-                                    C++
+                            <a href="/categories/python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    python学习
                                 </a>
                             
                             
@@ -1021,12 +1155,8 @@ int gcd(int a, int b){
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Practice-summary/">
-                        <span class="chip bg-color">Practice summary</span>
-                    </a>
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/python%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">python学习</span>
                     </a>
                     
                 </div>
