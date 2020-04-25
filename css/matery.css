@@ -144,7 +144,7 @@ pre {
 }
 */
 /*修改一下才能正确显示行号,而不是一条竖线 洪卫 shw2018 2019.08.14  */
-/*
+
 pre {
     padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
     margin: 1rem 0 !important;
@@ -157,7 +157,7 @@ pre {
 code {
     padding: 1px 5px;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    /*font-size: 0.91rem;*//*
+    /*font-size: 0.91rem;*/
     color: #e96900;
     background-color: #f8f8f8;
     border-radius: 2px;
