@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于博客</title>
+      <link href="/2020/04/27/04-guan-yu-bo-ke/"/>
+      <url>/2020/04/27/04-guan-yu-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<h2 id="博客细说"><a href="#博客细说" class="headerlink" title="博客细说"></a>博客细说</h2><p>  emmm，前几天刚刚弄了个服务器，然后就试了试搭了个博客。这样算下来博主有三个博客了，虽然内容不多，之后我会慢慢整理上去的。  </p><p>先介绍下这三个博客吧~  </p><ol><li>首先是本站，本站用Hexo搭建，主题为matery，很棒的一个主题，如果大家想看看如何搭建的话可以访问 <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a>、<a href="http://sunhwee.com" target="_blank" rel="noopener">洪卫の博客</a>、<a href="http://luokangyuan.com/" target="_blank" rel="noopener">码酱</a>,不需要域名、服务器即可搭建(当然如果如果有域名，可以将域名解析至该博客网址)。介绍下Hexo<br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/04img/hexo%E9%A1%B5%E9%9D%A2.png" alt=""><br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/04img/vs%E7%BC%96%E5%86%99.png" alt=""></li></ol><ul><li>优点：主题多可自选、灵活性强、接触源码</li><li>缺点：接触源码(可能一些小伙伴直接劝退)、无后台、发文章需要写md格式文件</li></ul><ol start="2"><li>其次是用服务器搭的那个博客(<a href="http://123.56.136.23:8090/" target="_blank" rel="noopener">传送门</a>), 网站使用halo搭建，主题为默认主题(不知道为啥其他主题加不进去，可能是我太菜~<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span>) 。怎么说呢，halo这个框架正处于发展初期吧，主题比较少，很多主题和简约版的个人空间差不多吧(个人认为，接触的比较少，如果有搭建的朋友，希望能深入交流)<br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/04img/halo%E9%A1%B5%E9%9D%A2.png" alt=""><br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/04img/halo%E5%90%8E%E5%8F%B0.png" alt=""></li></ol><ul><li>优点：halo很少会让你接触源码，也就前期敲些命令，配主题、发文章、上传图片什么的都可在后台设置，很方便(后台做的也很棒)</li><li>缺点：需要有服务器(当然也可在你本机搭建，不过如果你电脑关机或断网，网页就找不到了)，如果要域名解析的话需要备案，需要ssl证书申请</li></ul><ol start="3"><li><a href="https://www.cnblogs.com/DullRabbit/" target="_blank" rel="noopener">博客园</a>, emmm，我的博客园挺简洁的，写的文章挺多哈哈……</li></ol><h2 id="博客记录"><a href="#博客记录" class="headerlink" title="博客记录"></a>博客记录</h2><p>  博主有三个博客，本站主要是用来写一些学习笔记、记录生活和学习历程，博客园主要写一些练习题、记录学习中遇到的问题、个人总结，服务器的那个博客呢，主要是用来整合文章的。</p><p>  好了，今天就记录到这里了，也不早了，晚安~<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f62a.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62a.png?v8">😪</span></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 高级语法（一） 包</title>
       <link href="/2020/04/16/03-python-gao-ji-yu-fa-bao/"/>
       <url>/2020/04/16/03-python-gao-ji-yu-fa-bao/</url>
@@ -60,7 +85,7 @@
       <link href="/2020/01/24/01-bo-ke-shang-xian-la/"/>
       <url>/2020/01/24/01-bo-ke-shang-xian-la/</url>
       
-        <content type="html"><![CDATA[<p>  <br>欢迎访问呆萌兔的个人博客，博客刚刚上线，内容比较少，后期会慢慢添加。这个博客主要整理我的学习笔记、总结，<a href="https://www.cnblogs.com/DullRabbit/" target="_blank" rel="noopener">博客园</a>主要整理我遇到的问题，也会记录一些生活上的事情(*❦ω❦)。</p><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/01img/01.png" width="50%" height="50%"><h4 id="就先这样了！"><a href="#就先这样了！" class="headerlink" title="就先这样了！"></a>就先这样了！</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>  <br>欢迎访问呆萌兔的个人博客，博客刚刚上线，内容比较少，后期会慢慢添加。本站会记录博主的学习历程，也会记录一些生活上的事情(*❦ω❦)，欢迎大家访问~。</p><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/01img/01.png" width="50%" height="50%"><h4 id="就先这样了！"><a href="#就先这样了！" class="headerlink" title="就先这样了！"></a>就先这样了！</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
