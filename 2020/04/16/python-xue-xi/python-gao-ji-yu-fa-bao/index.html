@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux目录结构">
-    <meta name="description" content="Linux">
+    <meta name="keywords" content="python学习">
+    <meta name="description" content="python导包">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux目录结构 | 呆萌兔の博客</title>
+    <title>Python 高级语法（一） 包 | 呆萌兔の博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/awesome/css/all.css">
@@ -584,12 +584,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux目录结构</h1>
+                    <h1 class="description center-align post-title">Python 高级语法（一） 包</h1>
                 </div>
             </div>
         </div>
@@ -611,12 +611,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/python%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">python学习</span>
                             </a>
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/Python%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95/">
+                                <span class="chip bg-color">Python高级语法</span>
                             </a>
                         
                     </div>
@@ -627,8 +627,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                笔记
+                            <a href="/categories/python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                python学习
                             </a>
                         
                     </div>
@@ -640,7 +640,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-06
+                    2020-04-16
                 </div>
                 
 
@@ -662,48 +662,178 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h2><p>  首先，熟悉一下Linux的目录结构。</p>
-<p>  <img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/05img/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt=""></p>
-<blockquote>
-<p><b>常用目录：</b></p>
-</blockquote>
+                <h1 id="Python-高级语法（一）-包"><a href="#Python-高级语法（一）-包" class="headerlink" title="Python 高级语法（一） 包"></a>Python 高级语法（一） 包</h1><hr>
+<h2 id="1、模块"><a href="#1、模块" class="headerlink" title="1、模块"></a>1、模块</h2><ul>
+<li><p>一个模块就是一个python代码的文件，后缀名是.py就可以，模块就是python文件</p>
+</li>
+<li><p>为什么要用模块？</p>
 <ul>
-<li><font color="red">/bin<br>  bin是Binary的缩写, 这个目录存放着最经常使用的命令。</font></li>
-<li><font color="red">/boot<br>  这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。</font></li>
-<li><font color="red">/etc<br>  这个目录用来存放所有的系统管理所需要的配置文件和子目录。</font></li>
-<li><font color="red">/home<br>  用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</font></li>
-<li><font color="red">/lib<br>  这个目录里存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。 </font> </li>
-<li><font color="red">/opt<br>  这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。</font></li>
-<li><font color="red">/root<br>  该目录为系统管理员，也称作超级权限者的用户主目录。</font>  </li>
-<li><font color="red">/sbin<br>  s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</font></li>
-<li><font color="red">/sys<br>   这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs。sysfs文件系统集成了下面3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统。<br>  该文件系统是内核设备树的一个直观反映。<br>  当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</font></li>
-<li><font color="red">/tmp<br>  这个目录是用来存放一些临时文件的。</font></li>
-<li><font color="red">/usr<br>  这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录。</font></li>
-<li><font color="red">/usr/bin<br>  系统用户使用的应用程序。</font></li>
-<li><font color="red">/usr/sbin<br>  超级用户使用的比较高级的管理程序和系统守护程序。</font></li>
-<li><font color="red">/usr/src<br>  内核源代码默认的放置目录。</font></li>
-<li><font color="red">/var<br>  这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。</font></li>
+<li>程序太大，编写维护不方便，需要拆分</li>
+<li>模块可以增加代码的重复利用方式</li>
+<li>当做命名空间使用，避免命名冲突</li>
 </ul>
-<blockquote>
-<p><b>特殊目录符号：</b></p>
-</blockquote>
+</li>
+<li><p>如何定义模块？</p>
 <ul>
-<li><font color="red">/ 根目录 </font></li>
-<li><font color="red">. 当前目录 </font></li>
-<li><font color="red">.. 上级目录 </font></li>
+<li>模块是python文件，所以任何代码可以直接书写</li>
+<li>根据模块的规范，最好在模块中编写以下内容<ul>
+<li>函数（单一功能）</li>
+<li>类（相似功能的组合，或者类似业务模块）</li>
+<li>测试代码</li>
 </ul>
-<blockquote>
-<p><b>不常用目录：</b></p>
-</blockquote>
+</li>
+</ul>
+</li>
+<li><p>如何使用模块？</p>
 <ul>
-<li>/dev<br>  dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。</li>
-<li>/lost+found<br>  这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。  </li>
-<li>/media<br>  linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。  </li>
-<li>/mnt<br>  系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了。  </li>
-<li>/proc<br>  这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。<br>这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：</li>
-<li>/selinux<br>   这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似于windows的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的。  </li>
-<li>/srv<br>  该目录存放一些服务启动之后需要提取的数据。  </li>
-<li>/run<br>  是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run。</li>
+<li><p>模块直接导入</p>
+</li>
+<li><p>语法</p>
+<pre><code>import module_name  
+module_name.function_name  
+module_name.class_name</code></pre></li>
+<li><p>import 模块 as 别名</p>
+<ul>
+<li>导入的同时给模块起个别名</li>
+<li>其余用法跟第一种相同</li>
+</ul>
+</li>
+<li><p>form module_name import function_name, class_name</p>
+<ul>
+<li>按上述方法有选择行导入</li>
+<li>使用的时候直接使用导入的内容，不需要前缀</li>
+</ul>
+</li>
+<li><p>form module_name import *</p>
+<ul>
+<li>导入模块所有内容 </li>
+<li>类似于 import module_name 有区别：<ul>
+<li>优点：不需要写前缀</li>
+<li>缺点：可能会有命名污染</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>if __name__ == '__main__'</code>的使用</p>
+<ul>
+<li>可以有效避免模块代码被导入的时候被动执行的问题</li>
+<li>建议所有程序的入口都一此代码为入口</li>
+</ul>
+</li>
+</ul>
+<h2 id="2、模块的搜索路径和存储"><a href="#2、模块的搜索路径和存储" class="headerlink" title="2、模块的搜索路径和存储"></a>2、模块的搜索路径和存储</h2><ul>
+<li><p>什么是模块的搜索路径  </p>
+<ul>
+<li>加载摸块的时候，系统会在哪些地方寻找此模快  </li>
+</ul>
+</li>
+<li><p>系统默认的模块搜索路径  </p>
+<pre><code>import sys  
+sys.path # 属性可以获取路径列表</code></pre></li>
+<li><p>添加搜索路径  </p>
+<pre><code>sys.path.append(dir)</code></pre></li>
+<li><p>模块的加载顺序</p>
+<ol>
+<li>先搜索内存中已经加载好的模块</li>
+<li>搜索python的内置模块（eg：print())</li>
+<li>搜索sys.path路径</li>
+</ol>
+</li>
+</ul>
+<h2 id="3、包"><a href="#3、包" class="headerlink" title="3、包"></a>3、包</h2><ul>
+<li>包是一种组织管理代码的方式，包里存放的是模块，用于将模块包含在一起的文件夹就是包</li>
+<li>自定义包结构  </li>
+</ul>
+<pre><code>/---包
+/---/--- __init__.py
+/---/--- 模块1
+/---/--- 模块2
+/---/--- 子包（子文件夹）
+/---/---/--- __init__.py
+/---/---/--- 子包模块1
+/---/---/--- 子包模块2</code></pre><ul>
+<li><p>包的导入操作</p>
+<ul>
+<li><p>import package_name</p>
+<ul>
+<li><p>直接导入一个包 可以使用 <code>__init__.py</code>中的内容</p>
+</li>
+<li><p>使用方式是：  </p>
+<pre><code>package_name.func_name
+package_name.class_name.func_name()</code></pre></li>
+</ul>
+</li>
+<li><p>import package_name as 别名</p>
+<ul>
+<li>具体用法、作用方式与上述简单导入一致</li>
+<li>注意的是此种方法默认对<code>__init__.py</code>内容的导入</li>
+</ul>
+</li>
+<li><p>import package.module</p>
+<ul>
+<li><p>导入包中某个具体的模块</p>
+</li>
+<li><p>使用方法</p>
+<pre><code>package.module.func_name  
+package.module.class.fun()
+package.module.class.var</code></pre></li>
+</ul>
+</li>
+<li><p>import package.module as 别名</p>
+<ul>
+<li>具体模块应用别名</li>
+</ul>
+</li>
+<li><p>form … import …  </p>
+<ul>
+<li><p>from package import module1, module2, module3,…</p>
+<ul>
+<li><p>此种方法不执行<code>__init__.py</code>的内容</p>
+<pre><code>form package import module
+module.func_name()</code></pre></li>
+</ul>
+</li>
+<li><p>form package import *</p>
+<ul>
+<li><p>导入当前包<code>__init__.py</code>文件中所有的函数和类</p>
+</li>
+<li><p>使用方法</p>
+<pre><code>func_name()
+class_name.func_name()
+class_name.var</code></pre></li>
+</ul>
+</li>
+<li><p>form package.module import *</p>
+<ul>
+<li>导入包中指定模块的所有内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在开发环境中我经常会引用其他模块，可以在低昂前包中直接导入其他模块的内容</p>
+<ul>
+<li>import 完整的包或者模块的路径</li>
+</ul>
+</li>
+<li><p><code>__all__</code> 的用法</p>
+<ul>
+<li>在使用 from package import * 的时候 * 可以导入的内容</li>
+<li><code>__init__.py</code> 中如果文件为空， 或者没有 <code>__all__</code> 那么只可以把<code>__init__.py</code>中的内容导入</li>
+<li><code>__init__.py</code> 中如果设置了<code>__all__</code> 的值，那么则按照<code>__all__</code>指定的子包或模块进行加载，如此则不会载入<code>__init__.py</code>中其他的内容</li>
+<li><code>__all__ = ['module1','module2','package',....]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="4、命名空间"><a href="#4、命名空间" class="headerlink" title="4、命名空间"></a>4、命名空间</h2><ul>
+<li><p>用于区分不同位置不同功能但相同名称的函数或者变量的一个特定的前缀</p>
+</li>
+<li><p>作用是防止命名冲突</p>
+<pre><code>setName()
+Student.setName()</code></pre></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -748,7 +878,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rabbit2020.com/2020/05/06/05-linux-mu-lu-jie-gou/">http://rabbit2020.com/2020/05/06/05-linux-mu-lu-jie-gou/</a>
+                    <a href="http://rabbit2020.com/2020/04/16/python-xue-xi/python-gao-ji-yu-fa-bao/">http://rabbit2020.com/2020/04/16/python-xue-xi/python-gao-ji-yu-fa-bao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -786,12 +916,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/python%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">python学习</span>
                                 </a>
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Python%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95/">
+                                    <span class="chip bg-color">Python高级语法</span>
                                 </a>
                             
                         </div>
@@ -832,9 +962,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://rabbit2020.com/2020/05/06/05-linux-mu-lu-jie-gou/';
-        this.page.identifier = '/2020/05/06/05-linux-mu-lu-jie-gou/';
-        this.page.title = 'Linux目录结构';
+        this.page.url = 'http://rabbit2020.com/2020/04/16/python-xue-xi/python-gao-ji-yu-fa-bao/';
+        this.page.identifier = '/2020/04/16/python-xue-xi/python-gao-ji-yu-fa-bao/';
+        this.page.title = 'Python 高级语法（一） 包';
     };
     let disqus_shortname = '';
 
@@ -1124,60 +1254,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/06/06-linux-chang-yong-ming-ling/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="Linux常用命令">
-                        
-                        <span class="card-title">Linux常用命令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Linux
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/27/04-guan-yu-bo-ke/">
+                <a href="/2020/04/27/bo-ke-jian-jie/guan-yu-bo-ke/">
                     <div class="card-image">
                         
                         
@@ -1193,8 +1270,61 @@
                         
                     </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/02/18/sui-bi/xie-gei-zi-zhi-li-chai-de-zi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="给自制力差的自己">
+                        
+                        <span class="card-title">给自制力差的自己</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            写给自制力差的人(本文转自知乎)！
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
                             </span>
                         <span class="publish-author">
                             

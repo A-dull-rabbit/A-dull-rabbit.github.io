@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2020/2, 呆萌兔の博客">
-    <meta name="description" content="归档: 2020/2 | 呆萌兔の博客">
+    <meta name="keywords" content="Linux目录结构">
+    <meta name="description" content="Linux目录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>归档: 2020/2 | 呆萌兔の博客</title>
+    <title>Linux目录结构 | 呆萌兔の博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/awesome/css/all.css">
@@ -580,197 +580,683 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                呆萌兔の博客
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="jinrishici-sentence">正在加载今日诗词....</span>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Linux目录结构</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/banner/' + new Date().getDay() + '.jpg)');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="container content">
 
     
-    <div class="container archive-calendar">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
-
-    
-
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2019-05-06", "2020-05-06"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2019-05-06", 0], ["2019-05-07", 0], ["2019-05-08", 0], ["2019-05-09", 0], ["2019-05-10", 0], ["2019-05-11", 0], ["2019-05-12", 0], ["2019-05-13", 0], ["2019-05-14", 0], ["2019-05-15", 0], ["2019-05-16", 0], ["2019-05-17", 0], ["2019-05-18", 0], ["2019-05-19", 0], ["2019-05-20", 0], ["2019-05-21", 0], ["2019-05-22", 0], ["2019-05-23", 0], ["2019-05-24", 0], ["2019-05-25", 0], ["2019-05-26", 0], ["2019-05-27", 0], ["2019-05-28", 0], ["2019-05-29", 0], ["2019-05-30", 0], ["2019-05-31", 0], ["2019-06-01", 0], ["2019-06-02", 0], ["2019-06-03", 0], ["2019-06-04", 0], ["2019-06-05", 0], ["2019-06-06", 0], ["2019-06-07", 0], ["2019-06-08", 0], ["2019-06-09", 0], ["2019-06-10", 0], ["2019-06-11", 0], ["2019-06-12", 0], ["2019-06-13", 0], ["2019-06-14", 0], ["2019-06-15", 0], ["2019-06-16", 0], ["2019-06-17", 0], ["2019-06-18", 0], ["2019-06-19", 0], ["2019-06-20", 0], ["2019-06-21", 0], ["2019-06-22", 0], ["2019-06-23", 0], ["2019-06-24", 0], ["2019-06-25", 0], ["2019-06-26", 0], ["2019-06-27", 0], ["2019-06-28", 0], ["2019-06-29", 0], ["2019-06-30", 0], ["2019-07-01", 0], ["2019-07-02", 0], ["2019-07-03", 0], ["2019-07-04", 0], ["2019-07-05", 0], ["2019-07-06", 0], ["2019-07-07", 0], ["2019-07-08", 0], ["2019-07-09", 0], ["2019-07-10", 0], ["2019-07-11", 0], ["2019-07-12", 0], ["2019-07-13", 0], ["2019-07-14", 0], ["2019-07-15", 0], ["2019-07-16", 0], ["2019-07-17", 0], ["2019-07-18", 0], ["2019-07-19", 0], ["2019-07-20", 0], ["2019-07-21", 0], ["2019-07-22", 0], ["2019-07-23", 0], ["2019-07-24", 0], ["2019-07-25", 0], ["2019-07-26", 0], ["2019-07-27", 0], ["2019-07-28", 0], ["2019-07-29", 0], ["2019-07-30", 0], ["2019-07-31", 0], ["2019-08-01", 0], ["2019-08-02", 0], ["2019-08-03", 0], ["2019-08-04", 0], ["2019-08-05", 0], ["2019-08-06", 0], ["2019-08-07", 0], ["2019-08-08", 0], ["2019-08-09", 0], ["2019-08-10", 0], ["2019-08-11", 0], ["2019-08-12", 0], ["2019-08-13", 0], ["2019-08-14", 0], ["2019-08-15", 0], ["2019-08-16", 0], ["2019-08-17", 0], ["2019-08-18", 0], ["2019-08-19", 0], ["2019-08-20", 0], ["2019-08-21", 0], ["2019-08-22", 0], ["2019-08-23", 0], ["2019-08-24", 0], ["2019-08-25", 0], ["2019-08-26", 0], ["2019-08-27", 0], ["2019-08-28", 0], ["2019-08-29", 0], ["2019-08-30", 0], ["2019-08-31", 0], ["2019-09-01", 0], ["2019-09-02", 0], ["2019-09-03", 0], ["2019-09-04", 0], ["2019-09-05", 0], ["2019-09-06", 0], ["2019-09-07", 0], ["2019-09-08", 0], ["2019-09-09", 0], ["2019-09-10", 0], ["2019-09-11", 0], ["2019-09-12", 0], ["2019-09-13", 0], ["2019-09-14", 0], ["2019-09-15", 0], ["2019-09-16", 0], ["2019-09-17", 0], ["2019-09-18", 0], ["2019-09-19", 0], ["2019-09-20", 0], ["2019-09-21", 0], ["2019-09-22", 0], ["2019-09-23", 0], ["2019-09-24", 0], ["2019-09-25", 0], ["2019-09-26", 0], ["2019-09-27", 0], ["2019-09-28", 0], ["2019-09-29", 0], ["2019-09-30", 0], ["2019-10-01", 0], ["2019-10-02", 0], ["2019-10-03", 0], ["2019-10-04", 0], ["2019-10-05", 0], ["2019-10-06", 0], ["2019-10-07", 0], ["2019-10-08", 0], ["2019-10-09", 0], ["2019-10-10", 0], ["2019-10-11", 0], ["2019-10-12", 0], ["2019-10-13", 0], ["2019-10-14", 0], ["2019-10-15", 0], ["2019-10-16", 0], ["2019-10-17", 0], ["2019-10-18", 0], ["2019-10-19", 0], ["2019-10-20", 0], ["2019-10-21", 0], ["2019-10-22", 0], ["2019-10-23", 0], ["2019-10-24", 0], ["2019-10-25", 0], ["2019-10-26", 0], ["2019-10-27", 0], ["2019-10-28", 0], ["2019-10-29", 0], ["2019-10-30", 0], ["2019-10-31", 0], ["2019-11-01", 0], ["2019-11-02", 0], ["2019-11-03", 0], ["2019-11-04", 0], ["2019-11-05", 0], ["2019-11-06", 0], ["2019-11-07", 0], ["2019-11-08", 0], ["2019-11-09", 0], ["2019-11-10", 0], ["2019-11-11", 0], ["2019-11-12", 0], ["2019-11-13", 0], ["2019-11-14", 0], ["2019-11-15", 0], ["2019-11-16", 0], ["2019-11-17", 0], ["2019-11-18", 0], ["2019-11-19", 0], ["2019-11-20", 0], ["2019-11-21", 0], ["2019-11-22", 0], ["2019-11-23", 0], ["2019-11-24", 0], ["2019-11-25", 0], ["2019-11-26", 0], ["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 0], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 0], ["2020-01-02", 0], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 1], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 1], ["2020-02-19", 0], ["2020-02-20", 0], ["2020-02-21", 0], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 0], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 0], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 0], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 0], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 1], ["2020-04-17", 0], ["2020-04-18", 0], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 0], ["2020-04-23", 0], ["2020-04-24", 0], ["2020-04-25", 0], ["2020-04-26", 0], ["2020-04-27", 1], ["2020-04-28", 0], ["2020-04-29", 0], ["2020-04-30", 0], ["2020-05-01", 0], ["2020-05-02", 0], ["2020-05-03", 0], ["2020-05-04", 0], ["2020-05-05", 0], ["2020-05-06", 2]]
-        }]
-
-    };
-
-    myChart.setOption(option);
-</script>
-    
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2020">2020</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2020/02">02</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>18</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2020/02/18/sui-bi/xie-gei-zi-zhi-li-chai-de-zi-ji/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="给自制力差的自己">
-                                
-                                <span class="card-title">给自制力差的自己</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    写给自制力差的人(本文转自知乎)！
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
                         
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/"><span class="chip bg-color">随笔</span></a>
-                            
-                        </div>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
                         
                     </div>
+                    
                 </div>
-            </article>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-06
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h2><p>  首先，熟悉一下Linux的目录结构。</p>
+<p>  <img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/05img/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt=""></p>
+<blockquote>
+<p><b>常用目录：</b></p>
+</blockquote>
+<ul>
+<li><font color="red">/bin<br>  bin是Binary的缩写, 这个目录存放着最经常使用的命令。</font></li>
+<li><font color="red">/boot<br>  这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。</font></li>
+<li><font color="red">/etc<br>  这个目录用来存放所有的系统管理所需要的配置文件和子目录。</font></li>
+<li><font color="red">/home<br>  用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</font></li>
+<li><font color="red">/lib<br>  这个目录里存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。 </font> </li>
+<li><font color="red">/opt<br>  这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。</font></li>
+<li><font color="red">/root<br>  该目录为系统管理员，也称作超级权限者的用户主目录。</font>  </li>
+<li><font color="red">/sbin<br>  s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</font></li>
+<li><font color="red">/sys<br>   这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs。sysfs文件系统集成了下面3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统。<br>  该文件系统是内核设备树的一个直观反映。<br>  当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统中被创建。</font></li>
+<li><font color="red">/tmp<br>  这个目录是用来存放一些临时文件的。</font></li>
+<li><font color="red">/usr<br>  这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录。</font></li>
+<li><font color="red">/usr/bin<br>  系统用户使用的应用程序。</font></li>
+<li><font color="red">/usr/sbin<br>  超级用户使用的比较高级的管理程序和系统守护程序。</font></li>
+<li><font color="red">/usr/src<br>  内核源代码默认的放置目录。</font></li>
+<li><font color="red">/var<br>  这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。</font></li>
+</ul>
+<blockquote>
+<p><b>特殊目录符号：</b></p>
+</blockquote>
+<ul>
+<li><font color="red">/ 根目录 </font></li>
+<li><font color="red">. 当前目录 </font></li>
+<li><font color="red">.. 上级目录 </font></li>
+</ul>
+<blockquote>
+<p><b>不常用目录：</b></p>
+</blockquote>
+<ul>
+<li>/dev<br>  dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。</li>
+<li>/lost+found<br>  这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。  </li>
+<li>/media<br>  linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。  </li>
+<li>/mnt<br>  系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了。  </li>
+<li>/proc<br>  这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。<br>这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：</li>
+<li>/selinux<br>   这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似于windows的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的。  </li>
+<li>/srv<br>  该目录存放一些服务启动之后需要提取的数据。  </li>
+<li>/run<br>  是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run。</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://rabbit2020.com" rel="external nofollow noreferrer">呆萌兔</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://rabbit2020.com/2020/05/06/linux/linux-mu-lu-jie-gou/">http://rabbit2020.com/2020/05/06/linux/linux-mu-lu-jie-gou/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://rabbit2020.com" target="_blank">呆萌兔</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'http://rabbit2020.com/2020/05/06/linux/linux-mu-lu-jie-gou/';
+        this.page.identifier = '/2020/05/06/linux/linux-mu-lu-jie-gou/';
+        this.page.title = 'Linux目录结构';
+    };
+    let disqus_shortname = '';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'wIgp8GhtVuz7hcgF4wAd84jd-gzGzoHsz',
+        appKey: 'dR2p2nMP5PXSgrCf1c6apGgg',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '来填写你的评论吧~ 不要忘记留下名字呀~~'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/05/06/suan-fa/pai-xu/suan-fa-kuai-su-pai-xu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="快速排序算法（C++）">
+                        
+                        <span class="card-title">快速排序算法（C++）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            快速排序
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">快速排序</span>
+                    </a>
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/27/bo-ke-jian-jie/guan-yu-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="关于博客">
+                        
+                        <span class="card-title">关于博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            博客介绍
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
         
     </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/A-dull-rabbit/A-dull-rabbit.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    
 
 </main>
 
