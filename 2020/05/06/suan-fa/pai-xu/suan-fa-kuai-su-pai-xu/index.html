@@ -667,18 +667,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  好久没有写程序题很多东西都忘记了，所以以博客的形式把这些算法记录下来。本人排序只会冒泡（也忘的差不多了）（大二了，还好意思说:sweat_smile:）。由于冒泡时间复杂度(N²)太高，所以想用一下其他算法(呵，tui！ 明明就是啥也不会，学点新的算法:upside_down_face:)</p>
-<h2 id="快速排序详解"><a href="#快速排序详解" class="headerlink" title="快速排序详解"></a>快速排序详解</h2><h3 id="一、啥是快速排序？"><a href="#一、啥是快速排序？" class="headerlink" title="一、啥是快速排序？"></a>一、啥是快速排序？</h3><p>  快速排序由C. A. R. Hoare在1960年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。—摘自《百度百科》:sweat_smile: </p>
-<h3 id="二、过程"><a href="#二、过程" class="headerlink" title="二、过程"></a>二、过程</h3><p>  百度已经把基本思想说的差不多了，那该如何实现呢？</p>
+<h2 id="快速排序详解"><a href="#快速排序详解" class="headerlink" title="快速排序详解"></a>快速排序详解</h2><h4 id="一、啥是快速排序？"><a href="#一、啥是快速排序？" class="headerlink" title="一、啥是快速排序？"></a>一、啥是快速排序？</h4><p>  快速排序由C. A. R. Hoare在1960年提出。<b>它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</b>          —摘自《百度百科》:sweat_smile: </p>
+<h4 id="二、过程"><a href="#二、过程" class="headerlink" title="二、过程"></a>二、过程</h4><p>  百度已经把基本思想说的差不多了，那该如何实现呢？</p>
 <ol>
-<li>选数，先从数列中取出一个数作为基准数。</li>
-<li>分区，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。</li>
-<li>递归，再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/06img/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.gif" alt=""></li>
+<li><b>选数</b>，先从数列中取出一个数作为基准数。</li>
+<li><b>分区</b>，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。</li>
+<li><b>递归</b>，再对左右区间重复第二步，直到各区间只有一个数。<br><img src="https://rabbit2020-1301147272.cos.ap-shanghai.myqcloud.com/article/06img/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.gif" alt=""></li>
 </ol>
-<h3 id="三、代码区"><a href="#三、代码区" class="headerlink" title="三、代码区"></a>三、代码区</h3><pre><code>// 快速排序（从小到大）
+<h4 id="三、代码区"><a href="#三、代码区" class="headerlink" title="三、代码区"></a>三、代码区</h4><pre><code>// 快速排序（从小到大）
 void quickSort(int left, int right, int[] arr)
 {
     // 递归出口
-    if(left &gt;= right)  // 若左边的数比右边的数大，退出
+    if(left &gt;= right) 
         return;
 
     int i, j, base;
@@ -705,25 +705,25 @@ void quickSort(int left, int right, int[] arr)
     // 递归
     quickSort(left, i-1, arr);
     quickSort(i+1, right, arr);
-}</code></pre><h3 id="四、性能分析"><a href="#四、性能分析" class="headerlink" title="四、性能分析"></a>四、性能分析</h3><ul>
+}</code></pre><h4 id="四、性能分析"><a href="#四、性能分析" class="headerlink" title="四、性能分析"></a>四、性能分析</h4><ul>
 <li>最优情况：每一次都平分数组</li>
 <li>最差情况：每次选出的数为该部分最大/最小值 – 退化为冒泡排序</li>
 </ul>
 <ol>
-<li>时间复杂度</li>
-</ol>
+<li><p>时间复杂度</p>
 <ul>
 <li>最优的情况下时间复杂度为：O(nlogn)；</li>
 <li>最差的情况下时间复杂度为：O(n²);  </li>
 <li><b>一般情况下时间复杂度为：O(nlogn)</b></li>
 </ul>
-<ol start="2">
-<li>空间复杂度</li>
-</ol>
+</li>
+<li><p>空间复杂度</p>
 <ul>
 <li>最优的情况下空间复杂度为：O(logn)； </li>
 <li>最差的情况下空间复杂度为：O(n);  </li>
 </ul>
+</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
