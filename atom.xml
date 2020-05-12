@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rabbit2020.com/"/>
-  <updated>2020-05-07T04:54:28.207Z</updated>
+  <updated>2020-05-12T12:23:24.792Z</updated>
   <id>http://rabbit2020.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>K-最近邻算法</title>
+    <link href="http://rabbit2020.com/2020/05/12/cv/knn/"/>
+    <id>http://rabbit2020.com/2020/05/12/cv/knn/</id>
+    <published>2020-05-12T12:00:00.000Z</published>
+    <updated>2020-05-12T12:23:24.792Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  最近学习CV，学习K-最近邻算法，K-最近邻算法是图像分类中最基础算法，在做的过程中了解欧式距离与曼哈顿距离，python排序中lambda表达式的使用等等。<br>  K-最近邻算法虽不常用，但是机器学习中最简单易懂的算法，没有之一。<b>该算法通过新样本与已训练好的数据求欧式距离，求得的数据进行从小到大排序，选取前K个，之后用前K个数据进行投票表决，通过投票结果对新样本进行归类。<b></b></b></p><b><b><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><pre><code>import math# 一、构建一个已分好类的数据集movie_data = {"宝贝当家": [45, 2, 9, "喜剧片"],              "美人鱼": [21, 17, 5, "喜剧片"],              "澳门风云3": [54, 9, 11, "喜剧片"],              "功夫熊猫3": [39, 0, 31, "喜剧片"],              "谍影重重": [5, 2, 57, "动作片"],              "叶问3": [3, 2, 65, "动作片"],              "伦敦陷落": [2, 3, 55, "动作片"],              "我的特工爷爷": [6, 4, 21, "动作片"],              "奔爱": [7, 46, 4, "爱情片"],              "夜孔雀": [9, 39, 8, "爱情片"],              "代理情人": [9, 38, 2, "爱情片"],              }#  二、计算一个新样本与数据集中所有数据的距离new_data = {"唐人街探案":[23, 3, 17, ""]}x = new_data.get("唐人街探案")KNN = []for key, v in movie_data.items():    # 求新样本与已有样本的欧氏距离    d = math.sqrt((x[0] - v[0]) ** 2 + (x[1] - v[1]) ** 2 + (x[2] - v[2]) ** 2)    KNN.append([key, round(d, 2)])      # 保留两位小数print("1.欧氏距离计算：{}".format(KNN))# 三、数据排序KNN.sort(key=lambda dis: dis[1])print("2.数据排序：{}".format(KNN))# 四、选取距离最小的k个样本。KNN=KNN[:5]print("3.选取最小距离的K(本例为5)个样本：{}".format(KNN))# 五、根据所选出的数据进行投票labels = {"喜剧片":0,"动作片":0,"爱情片":0}for s in KNN:    label = movie_data[s[0]]    # 获取value    labels[label[3]] += 1       # label[3]是标签类型labels = sorted(labels.items(), key=lambda l:l[1], reverse=True)print("4.K个数据进行投票：","投票结果：{}".format(labels), "归类结果：{}".format(labels[0][0]),sep='\n')# 分类结束：new_data["唐人街探案"][3] = labels[0][0]print("分类结果：{}".format(new_data))</code></pre><h2 id="参考博文"><a href="#参考博文" class="headerlink" title="参考博文"></a>参考博文</h2><p>K最近邻算法（KNN）:<a href="https://blog.csdn.net/saltriver/article/details/52502253" target="_blank" rel="noopener">https://blog.csdn.net/saltriver/article/details/52502253</a><br>python 字典相关操作: <a href="https://blog.csdn.net/fengbansha/article/details/85239224" target="_blank" rel="noopener">https://blog.csdn.net/fengbansha/article/details/85239224</a><br>python lambda表达式:<a href="https://www.cnblogs.com/hf8051/p/8085424.html" target="_blank" rel="noopener">https://www.cnblogs.com/hf8051/p/8085424.html</a></p></b></b><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  最近学习CV，学习K-最近邻算法，K-最近邻算法是图像分类中最基础算法，在做的过程中了解欧式距离与曼哈顿距离，python排序中lamb
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://rabbit2020.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CV" scheme="http://rabbit2020.com/tags/CV/"/>
+    
+      <category term="机器学习" scheme="http://rabbit2020.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统 第一章 思维导图</title>
